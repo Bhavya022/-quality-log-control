@@ -24,7 +24,10 @@ console.log(requestLoggerMiddleware);
 const ingestorRoutes = require('./routes/ingestorRoutes');
 const queryRoutes = require('./routes/queryRoutes'); 
 
-// Use routes
+// Use routes 
+app.get('/',(req,res)=>{
+  res.send('WELCOME TO LOG CONTROL')
+})
 app.use('/api/ingestor', ingestorRoutes);
 app.use('/api/query', queryRoutes);
 
